@@ -1,0 +1,6 @@
+div#doughnut_charts div.wrapper > div > div > div	{ height: 220px; width: 220px; }
+
+@media (min-width: 576px) {
+	div#doughnut_charts div.wrapper									{ height: 300px; }
+	div#doughnut_charts div.wrapper > div > div			{ width: 50%; }
+}
