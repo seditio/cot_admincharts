@@ -52,11 +52,11 @@ $res_months = Cot::$db->query("SELECT * FROM $db_stats WHERE stat_name LIKE '20%
 if ($sql->rowCount() > 0) {
   $hits_m = [];
   foreach ($res_months as $row) {
-    $m = mb_substr($row['stat_name'], 5, 2);
-    if (!isset($hits_m[$m])) {
-      $hits_m[$m] = 0;
+    $hm = mb_substr($row['stat_name'], 5, 2);
+    if (!isset($hits_m[$hm])) {
+      $hits_m[$hm] = 0;
     }
-    $hits_m[$m] += $row['stat_value'];
+    $hits_m[$hm] += $row['stat_value'];
   }
   $hits_m = array_reverse(array_slice($hits_m, 0, $period_months, true), true);
 
